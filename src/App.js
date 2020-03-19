@@ -2,9 +2,7 @@ import React, { useState, Fragment } from 'react'
 import AddUserForm from './forms/AddUserForm'
 import EditUserForm from './forms/EditUserForm'
 import UserTable from './tables/UserTable'
-
-// import { TodoList } from './Todo/TodoList';
-// import { Menu } from 'antd';
+import { Pagination } from 'antd';
 
 const App = () => {
 	// Data
@@ -65,6 +63,7 @@ const App = () => {
 					<div className="flex-large">
 						<h2>View users</h2>
 						<UserTable users={users} editRow={editRow} deleteUser={deleteUser} />
+						<Pagination defaultCurrent={1} total={10} style={{ float: "right" }} />
 					</div>
 				</div>
 			</div>

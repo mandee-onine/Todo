@@ -1,6 +1,7 @@
 import React from "react";
 import { Input, List, DatePicker } from "antd";
 import 'bootstrap/dist/css/bootstrap.min.css';
+import { Pagination } from 'antd';
 
 // Don't forget to include the css for antd!
 import "antd/dist/antd.css";
@@ -96,6 +97,7 @@ export default class Todo extends React.Component {
                                         />
                                     )}
                                 />
+                                <Pagination defaultCurrent={1} total={10} style={{ float: "right" }} />
                             </div>
                         </div>
                     </div>
